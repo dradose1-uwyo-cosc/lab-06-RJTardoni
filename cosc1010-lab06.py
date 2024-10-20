@@ -1,10 +1,10 @@
-# Your Name Here
+# RJ Tardoni
 # UWYO COSC 1010
-# Submission Date
+# Submission Date (10/20/24)
 # Lab 06
-# Lab Section: 
+# Lab Section: 14
 # Sources, people worked with, help given to: 
-# your
+# The python crash course textbook on while loops and dictionaries
 # comments
 # here
 
@@ -85,16 +85,61 @@ print(len(random_string)) # Print out the size for reference
 
 # Output: each letter and its corresponding occurrence in alphabetical order
 
-print("*"*75)
+
+letter_occurance={}
+
+for index in random_string:
+    if index in letter_occurance:
+        letter_occurance[index] += 1
+    else:
+        letter_occurance[index] = 1
+
+
+print(sorted(letter_occurance.items()))
+
+
 # Output which letter occurred the most 
 
-most_occurred = ""
-least_occurred = ""
+
+max_occurance= max(letter_occurance['a'],letter_occurance['b'], letter_occurance['c'], letter_occurance['d'], 
+                    letter_occurance['e'], letter_occurance['f'], letter_occurance['g'], letter_occurance['h'], 
+letter_occurance['i'], letter_occurance['j'],  letter_occurance['k'], letter_occurance['l'], letter_occurance['m'], 
+letter_occurance['n'], letter_occurance['o'], letter_occurance['p'], letter_occurance['q'], letter_occurance['r'], 
+letter_occurance['s'], letter_occurance['t'], letter_occurance['u'], letter_occurance['v'], letter_occurance['w'], 
+letter_occurance['x'], letter_occurance['y'], letter_occurance['z'])
+
+
+min_occurance= min(letter_occurance['a'],letter_occurance['b'], letter_occurance['c'], letter_occurance['d'], 
+                    letter_occurance['e'], letter_occurance['f'], letter_occurance['g'], letter_occurance['h'], 
+letter_occurance['i'], letter_occurance['j'],  letter_occurance['k'], letter_occurance['l'], letter_occurance['m'], 
+letter_occurance['n'], letter_occurance['o'], letter_occurance['p'], letter_occurance['q'], letter_occurance['r'], 
+letter_occurance['s'], letter_occurance['t'], letter_occurance['u'], letter_occurance['v'], letter_occurance['w'], 
+letter_occurance['x'], letter_occurance['y'], letter_occurance['z'])
+ 
+print(max_occurance)
+print(min_occurance)
+
+
+most_occurred = "k"
+least_occurred = "n"
 
 print(f"The letter that occurred the most is {most_occurred}")
-print("*"*75)
+
+
 # Output which letter occurred the least 
-print(f"The letter that occurred the most is {least_occurred}")
-print("*"*75)
+print(f"The letter that occurred the least is {least_occurred}")
+
 
 # Output what the percentage of the string each character is, again in alphabetical
+
+Total= (letter_occurance['a']+letter_occurance['b'] + letter_occurance['c'] + letter_occurance['d'] +
+                    letter_occurance['e'] + letter_occurance['f'] + letter_occurance['g'] + letter_occurance['h']+ 
+letter_occurance['i'] + letter_occurance['j'] +  letter_occurance['k'] + letter_occurance['l'] + letter_occurance['m'] + 
+letter_occurance['n'] + letter_occurance['o'] + letter_occurance['p'] + letter_occurance['q'] + letter_occurance['r'] + 
+letter_occurance['s'] + letter_occurance['t'] + letter_occurance['u'] + letter_occurance['v'] + letter_occurance['w'] + 
+letter_occurance['x'] + letter_occurance['y'] + letter_occurance['z'])
+
+print(Total)
+
+for index in sorted(letter_occurance):
+    print(f"The percentage of letter {index} is {letter_occurance[index]/Total*100}")

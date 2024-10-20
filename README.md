@@ -1,8 +1,8 @@
-# [Name]
-## [Assignment #]
-## [Submission date: MM/DD/YY]
+# [RJ Tardoni]
+## [Assignment #6]
+## [Submission date: 10/20/24]
 ## Worked with/sources 
-* example
+* Python Crash Course for while loop chapter
 * example
 * example
 * example
